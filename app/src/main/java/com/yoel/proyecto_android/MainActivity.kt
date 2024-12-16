@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import model.AppDatabase
 import view.AnimalScreen
+import model.tests.TestDao
 
 
 class MainActivity : ComponentActivity() {
@@ -22,10 +23,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         database = AppDatabase.getDatabase(this)
+        val testDao = TestDao(applicationContext)
         setContent {
             Surface(modifier = Modifier.fillMaxSize()) {
                 AnimalScreen(database)
             }
+
+//            // Sin interfáz
+//            // Insertar datos
+//            testDao.testInsert()
+//
+//            // Actualizar datos
+//            testDao.testUpdate()
+//
+//            // Eliminar datos
+//            testDao.testDelete()
         }
     }
 }
