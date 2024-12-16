@@ -7,20 +7,9 @@ import androidx.room.PrimaryKey
 
 @Entity(
     tableName = "vacinnes",
-    foreignKeys = [
-        ForeignKey(
-            entity = Animal::class,
-            parentColumns = ["animalId"],
-            childColumns = ["animalId"],
-            onDelete = ForeignKey.CASCADE
-        )
-    ],
-    indices = [Index(value = ["animalId"])]
 )
 data class Vacinne(
     @PrimaryKey(autoGenerate = true)
     val vacinneId: Int = 0,
-    val name: String,
-    val date: String,
-    val animalId: Int
+    val date: String
 )
