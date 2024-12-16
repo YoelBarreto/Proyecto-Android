@@ -67,4 +67,17 @@ interface AnimalDao {
         INNER JOIN vacinnes v ON a.animalId = v.animalId
     """)
     suspend fun getVacinnesWithAnimal(): List<VacinneWithAnimal>
+
+    // Metodo para eliminar un Animal junto con sus Vacunas y Ubicación
+    @Transaction
+    @Query("DELETE FROM animals WHERE animalId = :animalId")
+    suspend fun deleteAnimal(animalId: Int)
+
+    // Metodo para eliminar la Vacuna
+    @Query("DELETE FROM vacinnes WHERE animalId = :animalId")
+    suspend fun deleteVacinne(animalId: Int)
+
+    // Metodo para eliminar la Ubicación
+    @Query("DELETE FROM ubications WHERE animalId = :animalId")
+    suspend fun deleteUbication(animalId: Int)
 }
