@@ -4,6 +4,6 @@ data class CompleteAnimal(
     val name: String,
     val specie: String,
     val dateVacinne: String,
-    val x: String,
-    val y: String
+    val x: Double,
+    val y: Double
 )
