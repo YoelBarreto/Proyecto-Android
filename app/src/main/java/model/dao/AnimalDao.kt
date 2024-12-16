@@ -51,6 +51,17 @@ interface AnimalDao {
             )
         )
     }
+    // Actualizar un Animal
+    @Update
+    suspend fun updateAnimal(animal: Animal)
+
+    // Actualizar la Vacuna de un Animal
+    @Update
+    suspend fun updateVacinne(vacinne: Vacinne)
+
+    // Actualizar la Ubicación de un Animal
+    @Update
+    suspend fun updateUbication(ubication: Ubication)
 
     // Consulta para obtener las ubicaciones con nombre del animal
     @Query("""
