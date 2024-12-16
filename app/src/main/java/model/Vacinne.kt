@@ -22,5 +22,5 @@ data class Vacinne(
     val vacinneId: Int = 0,
     val name: String,
     val date: String,
-    val animalId: Int // Clave foránea hacia Animal.
+    val animalId: Int
 )
