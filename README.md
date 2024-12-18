@@ -12,7 +12,7 @@ Esta principalmente compuesto por:
 
 Y la base de datos organizada de esta manera:
 
-
+![basedatosorg](https://github.com/user-attachments/assets/d74fa4e9-1283-437b-a4f3-189efbe474ff)
 
 ## Aplicación/Tematica: Gestor de mascotas
 
