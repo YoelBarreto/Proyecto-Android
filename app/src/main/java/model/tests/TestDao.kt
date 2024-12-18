@@ -27,7 +27,6 @@ class TestDao(context: Context) {
 
         CoroutineScope(Dispatchers.IO).launch {
             db.animalDao().insertCompleteAnimal(completeAnimal)
-            Log.d("TestDao", "Animal, Vacuna y Ubicación insertados correctamente.")
         }
     }
 
@@ -54,9 +53,8 @@ class TestDao(context: Context) {
                 y = 74.0060,
                 animalId = 1
             )
-            db.animalDao().updateUbication(ubicationToUpdate)
 
-            Log.d("TestDao", "Animal, Vacuna y Ubicación actualizados correctamente.")
+            db.animalDao().updateUbication(ubicationToUpdate)
         }
     }
 
@@ -65,7 +63,6 @@ class TestDao(context: Context) {
 
         CoroutineScope(Dispatchers.IO).launch {
             db.animalDao().deleteAnimal(animalIdToDelete)
-            Log.d("TestDao", "Animal con ID $animalIdToDelete y sus relaciones eliminados correctamente.")
         }
     }
 }
