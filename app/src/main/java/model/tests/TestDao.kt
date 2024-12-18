@@ -43,7 +43,7 @@ class TestDao(context: Context) {
 
             val vacinneToUpdate = Vacinne(
                 vacinneId = 1,
-                date = "2025-01-01",
+                date = "2125-01-01",
                 animalId = 1
             )
             db.animalDao().updateVacinne(vacinneToUpdate)
