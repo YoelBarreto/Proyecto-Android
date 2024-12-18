@@ -71,14 +71,14 @@ fun AnimalScreen(database: AppDatabase) {
 
 
     // Cargar tareas al iniciar
-    LaunchedEffect(Unit) {
-        try {
-            typeTasks = typeTaskDao.getAllTypeTasks()
-            tasks = taskDao.getTasksWithTypeTasks()
-        } catch (e: Exception) {
-            Log.i("Error", e.toString())
-        }
-    }
+//    LaunchedEffect(Unit) {
+//        try {
+//            typeTasks = typeTaskDao.getAllTypeTasks()
+//            tasks = taskDao.getTasksWithTypeTasks()
+//        } catch (e: Exception) {
+//            Log.i("Error", e.toString())
+//        }
+//    }
 
     // Pantalla principal
     Column(
@@ -138,19 +138,19 @@ fun AnimalScreen(database: AppDatabase) {
                 expanded = expandedType,
                 onDismissRequest = { expandedType = false }
             ) {
-                typeTasks.forEach { type ->
-
-                    DropdownMenuItem(
-                        text = {
-                            Text(type.titulo)
-                        },
-                        onClick = {
-                            newTypeid = type.id
-                            TypeSelected = type.titulo
-                            expandedType = false
-                        }
-                    )
-                }
+//                typeTasks.forEach { type ->
+//
+//                    DropdownMenuItem(
+//                        text = {
+//                            Text(type.titulo)
+//                        },
+//                        onClick = {
+//                            newTypeid = type.id
+//                            TypeSelected = type.titulo
+//                            expandedType = false
+//                        }
+//                    )
+//                }
             }
 
             Button(
